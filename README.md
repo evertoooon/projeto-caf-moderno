@@ -23,7 +23,7 @@ projeto-caf-moderno/
 ├── pedidos.html → Pedidos online
 ├── recomendacoes.html → Recomendações de cafés
 ├── css/ → Estilos
-└── js/ → Scripts
+└── php/ → Scripts
 
 
 ## 🛠 Tecnologias

@@ -29,7 +29,7 @@ projeto-caf-moderno/
 ## 🛠 Tecnologias
 
 - **Banco de Dados:** PostgreSQL  
-- **Front-end:** HTML, CSS, JavaScript  
+- **Front-end:** HTML, CSS, PHP
 
 ## 👥 Colaboradores
 

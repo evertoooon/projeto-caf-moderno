@@ -21,7 +21,6 @@ projeto-caf-moderno/
 ├── index.html → Página inicial
 ├── reservas.html → Reservas
 ├── pedidos.html → Pedidos online
-├── recomendacoes.html → Recomendações de cafés
 ├── css/ → Estilos
 └── php/ → Scripts
 

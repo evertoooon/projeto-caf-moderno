@@ -14,7 +14,7 @@ Entre em contato pelo github
 
 Inclua:
 - Descrição do problema e impacto
-- Passos para reproduzir
+- Passos para reproduzirgit 
 - Ambiente (SO, versão do PHP/DB)
 - Logs/prints (se possível)
 

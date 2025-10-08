@@ -1,18 +1,29 @@
 
+---
 
-```markdown
-# Política de Segurança
+## `SECURITY.md`
 
-Se encontrar uma vulnerabilidade:
+```md
+# Política de Segurança – Café Moderno
 
-1. **Não** abra issue pública.
-2. Envie detalhes para 210936@upf.com
-3. Daremos retorno em até **7 dias úteis** com próximos passos.
+Se você encontrou uma vulnerabilidade, **não** abra uma issue pública.
+Envie um e-mail privado para:
 
-## Versões suportadas
-- `main` (ramo principal do projeto).
+- Éverton: seu-email@exemplo.com
+- Débora: email-da-deb@exemplo.com
 
-## Boas práticas internas
-- Nunca commitar senhas/segredos.
-- Usar `.env` local (não versionado).
-- Revisão obrigatória em PRs que tocam autenticação/queries SQL.
+Inclua:
+- Descrição do problema e impacto
+- Passos para reproduzir
+- Ambiente (SO, versão do PHP/DB)
+- Logs/prints (se possível)
+
+Responderemos em até **7 dias úteis** com confirmação e próximos passos.
+Não faremos divulgação pública antes de existir correção.
+
+## Escopo
+- Código PHP (pasta `php/`)
+- Scripts de banco (`banco/`)
+- Páginas e formulários (pasta `web/`)
+
+Obrigado por ajudar a manter o projeto seguro.

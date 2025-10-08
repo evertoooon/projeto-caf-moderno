@@ -1,17 +1,21 @@
-## Descrição
-Explique o que foi alterado e por quê.
+# Descrição
+Explique **o que** foi feito e **por quê**.
 
 ## Tipo de mudança
 - [ ] feat (nova funcionalidade)
 - [ ] fix (correção)
 - [ ] docs (documentação)
-- [ ] refactor (melhoria interna)
-- [ ] chore (infra/scripts)
-
-## Como testar
-Passos para validar localmente.
+- [ ] refactor / chore / test
 
 ## Checklist
-- [ ] Testei localmente
-- [ ] Atualizei docs/README quando necessário
-- [ ] Não quebrei o schema/seed sem orientar a migração
+- [ ] Testei localmente (`php -S localhost:8080 -t web`)
+- [ ] Não inclui credenciais/segredos
+- [ ] Atualizei README/Docs se necessário
+- [ ] Scripts SQL ajustados (se aplicável)
+
+## Screenshots / Evidências
+(Se aplicável)
+
+## Issues relacionadas
+Closes #N
+

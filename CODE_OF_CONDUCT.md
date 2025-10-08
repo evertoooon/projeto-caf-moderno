@@ -1,20 +1,27 @@
-# Código de Conduta — Café de Bairro Moderno
+# Código de Conduta – Projeto Café Moderno
 
-Nosso objetivo é manter um ambiente acolhedor e respeitoso.
+Este projeto busca um ambiente acolhedor, respeitoso e colaborativo.
 
-## Nosso compromisso
-- Tratar todas as pessoas com respeito e empatia.  
-- Não toleramos assédio, discriminação, linguagem ou comportamento ofensivos.
+## Esperamos de tod@s
+- Respeito, cordialidade e empatia nas interações.
+- Críticas construtivas, com foco no problema.
+- Comunicação clara (issues, commits, PRs com contexto).
+- Cumprir as diretrizes de contribuição deste repositório.
 
-## Nossa responsabilidade
-- Moderadores podem editar/remover issues, PRs e comentários que violem este código.  
-- Ações apropriadas podem incluir avisos ou restrição de participação.
+## Comportamentos inaceitáveis
+- Assédio, insultos, discriminação ou ataques pessoais.
+- Compartilhar conteúdo ofensivo ou confidencial.
+- Desrespeitar decisões técnicas sem argumentação.
+
+## Cumprimento
+Situações podem ser reportadas de forma **privada** pelos GitHubs oficiais:
+
+- **Éverton:** [@evertoooon](https://github.com/evertoooon)  
+- **Débora:** [@deborarebelatto02](https://github.com/deborarebelatto02)
+
+A manutenção do projeto poderá advertir, encerrar discussões, ou, em casos graves, bloquear o acesso.
 
 ## Escopo
-Este código se aplica aos espaços do projeto (GitHub, chats, reuniões) e quando alguém estiver representando o projeto.
+Este código se aplica a todas as áreas do projeto: GitHub (issues/PRs), mensagens, reuniões e materiais do repositório.
 
-## Reportando
-Envie um e-mail para 210936@upf.com ou abra uma issue privada com detalhes (links, prints, contexto).
-
-Adaptado do [Contributor Covenant](https://www.contributor-covenant.org/).
-
+Obrigado por manter uma comunidade gentil e profissional!

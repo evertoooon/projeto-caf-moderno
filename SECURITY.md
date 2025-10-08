@@ -7,10 +7,10 @@
 # Política de Segurança – Café Moderno
 
 Se você encontrou uma vulnerabilidade, **não** abra uma issue pública.
-Envie um e-mail privado para:
+Entre em contato pelo github
 
-- Éverton: seu-email@exemplo.com
-- Débora: email-da-deb@exemplo.com
+- **Éverton:** [@evertoooon](https://github.com/evertoooon)  
+- **Débora:** [@deborarebelatto02](https://github.com/deborarebelatto02)
 
 Inclua:
 - Descrição do problema e impacto

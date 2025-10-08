@@ -8,7 +8,6 @@ O objetivo é criar um **site** e um **banco de dados** para um café fictício 
 - 📋 **Cardápio online** (bebidas, sobremesas, lanches, etc.)
 - 🪑 **Reserva de mesas**
 - 🛒 **Pedidos online**
-- 💡 **Recomendações inteligentes** (ex: “Qual café combina com você hoje?”)
 
 ## 🗂 Estrutura do Projeto
 projeto-caf-moderno/

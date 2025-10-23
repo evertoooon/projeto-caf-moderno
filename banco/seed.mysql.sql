@@ -214,7 +214,9 @@ ORDER BY categoria, nome;
 -- Qual é o total (R$) de cada pedido?
 SELECT p.id_pedido,
        SUM(pi.quantidade * ci.preco) AS total_pedido
-FROM pedido p
+FROM pedido pdir banco
+git status
+
 JOIN pedido_item pi ON pi.id_pedido = p.id_pedido
 JOIN cardapioitem ci ON ci.id_item  = pi.id_item
 GROUP BY p.id_pedido

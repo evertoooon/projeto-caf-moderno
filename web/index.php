@@ -11,6 +11,6 @@
 </head>
 <body>
 
-<?php include_once __DIR__ . '/../php/partials/header.php'; ?>
+<?php include_once __DIR__ . '/../php/partials/footer.php'; ?>
 
 

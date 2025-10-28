@@ -6,15 +6,7 @@
 SET NAMES utf8mb4;
 SET time_zone = '+00:00';
 
--- (Opcional) reset geral mantendo integridade referencial
-SET FOREIGN_KEY_CHECKS = 0;
-TRUNCATE TABLE pedido_item;
-TRUNCATE TABLE pedido;
-TRUNCATE TABLE reserva;
-TRUNCATE TABLE cardapioitem;
-TRUNCATE TABLE mesa;
-TRUNCATE TABLE cliente;
-SET FOREIGN_KEY_CHECKS = 1;
+
 
 -- ===============================
 -- 1) CLIENTES (10)

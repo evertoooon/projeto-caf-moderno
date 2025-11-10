@@ -12,7 +12,10 @@ function slug($s) {
 $busca = $_GET['q'] ?? '';
 $categoria = $_GET['cat'] ?? '';
 
-$sql = "SELECT id_item, nome, descricao, preco, categoria, imagem FROM cardapioitem";
+$sql = $sql = "SELECT id_item, nome, categoria, preco, imagem
+        FROM cardapioitem
+        ORDER BY id_item ASC";
+
 $params = [];
 $w = [];
 

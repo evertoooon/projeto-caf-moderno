@@ -63,10 +63,11 @@ function fmt($ts){ return date('d/m/Y H:i', strtotime($ts)); }
         <td><span class="badge"><?= $p['status'] ?></span></td>
         <td><?= fmt($p['data_hora']) ?></td>
         <td class="actions">
-          <a href="/Projetos/projeto-caf-moderno/php/pedido/read.php?id=<?= $p['id_pedido'] ?>">Ver</a>
-          <a href="/Projetos/projeto-caf-moderno/php/pedido/update.php?id=<?= $p['id_pedido'] ?>">Editar</a>
-          <a class="danger" onclick="return confirm('Excluir este pedido (itens serão apagados)?')"
-             href="/Projetos/projeto-caf-moderno/php/pedido/delete.php?id=<?= $p['id_pedido'] ?>">Excluir</a>
+        <a href="/Projetos/projeto-caf-moderno/php/pedido/read.php?id=<?= $p['id_pedido'] ?>">Ver</a>
+        <a href="/Projetos/projeto-caf-moderno/php/pedido/update.php?id=<?= $p['id_pedido'] ?>">Editar</a>
+        <a class="btn" href="/Projetos/projeto-caf-moderno/php/pedido_item/index.php?id_pedido=<?= $p['id_pedido'] ?>">Itens</a>
+        <a class="danger" onclick="return confirm('Excluir este pedido (itens serão apagados)?')"
+        href="/Projetos/projeto-caf-moderno/php/pedido/delete.php?id=<?= $p['id_pedido'] ?>">Excluir</a>
         </td>
       </tr>
     <?php endwhile; ?>

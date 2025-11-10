@@ -3,6 +3,11 @@ require_once __DIR__ . '/../conexao.php';
 include_once __DIR__ . '/../partials/header.php';
 
 $id_pedido = (int)($_GET['id_pedido'] ?? 0);
+if ($id_pedido <= 0) {
+  header("Location: /Projetos/projeto-caf-moderno/php/pedido/index.php");
+  exit;
+}
+
 
 // pedido + cliente (para header)
 $h = $conn->prepare("SELECT p.id_pedido, p.status, c.nome AS cliente

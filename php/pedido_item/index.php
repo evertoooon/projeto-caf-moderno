@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/../conexao.php';
-$currentTitle = 'Cardápio';
 include_once __DIR__ . '/../partials/header.php';
 
 $id_pedido = (int)($_GET['id_pedido'] ?? 0);

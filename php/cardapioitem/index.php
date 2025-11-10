@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../conexao.php';
+$currentTitle = 'Cardápio';
 include_once __DIR__ . '/../partials/header.php';
 
 $busca     = trim($_GET['q']   ?? '');

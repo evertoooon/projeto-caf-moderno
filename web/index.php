@@ -60,13 +60,7 @@ include_once __DIR__ . '/../php/partials/header.php';
         <div class="actions">
           <a class="btn" href="/Projetos/projeto-caf-moderno/php/pedido/index.php">Abrir</a>
         </div>
-      </div>
-      <div>
-        <h3>Itens do Pedido</h3>
-        <p>Relação N:N de pedidos e itens.</p>
-        <div class="actions">
-          <a class="btn" href="/Projetos/projeto-caf-moderno/php/pedido_item/index.php">Abrir</a>
-        </div>
+       </div>
       </div>
     </div>
   </div>

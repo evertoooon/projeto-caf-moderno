@@ -3,7 +3,7 @@
 include_once __DIR__ . '/../php/partials/header.php';
 ?>
 <div class="container">
-  <h1>Café Moderno — Sistema</h1>
+  <h1>Café Moderno — Débora Rebelatto de Vila e Éverton Lima</h1>
   <p>Bem-vindo! Use os atalhos abaixo ou a busca rápida de clientes.</p>
 
   <!-- Busca rápida de clientes (redireciona para o CRUD) -->

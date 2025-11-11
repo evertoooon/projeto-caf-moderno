@@ -1,5 +1,5 @@
 <?php
-// php/partials/header.php
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

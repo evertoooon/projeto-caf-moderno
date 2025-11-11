@@ -1,12 +1,12 @@
 <?php
-// web/index.php
+
 include_once __DIR__ . '/../php/partials/header.php';
 ?>
 <div class="container">
   <h1>Café Moderno — Débora Rebelatto de Vila e Éverton Lima</h1>
   <p>Bem-vindo! Use os atalhos abaixo ou a busca rápida de clientes.</p>
 
-  <!-- Busca rápida de clientes (redireciona para o CRUD) -->
+
   <form class="form-entity" method="get" action="/Projetos/projeto-caf-moderno/php/cliente/index.php" style="margin:16px 0;">
     <div class="row">
       <div>
@@ -20,7 +20,7 @@ include_once __DIR__ . '/../php/partials/header.php';
     </div>
   </form>
 
-  <!-- Atalhos principais -->
+
   <div class="form-entity">
     <div class="row-3">
       <div>

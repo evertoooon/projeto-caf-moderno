@@ -75,6 +75,36 @@ h1 {
   background: #d55c4b;
 }
 
+/* ===== Ajustes específicos para a coluna de Ações nas tabelas ===== */
+.table td.actions {
+  white-space: nowrap;       /* mantém os botões na mesma linha quando couber */
+  width: 1%;                 /* a coluna se ajusta ao conteúdo, sem alargar a tabela */
+}
+.table td.actions .btn,
+.table td.actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;         /* botões mais compactos dentro da tabela */
+  font-size: 14px;
+  margin-right: 6px;
+}
+.table td.actions .btn:last-child,
+.table td.actions a:last-child {
+  margin-right: 0;
+}
+
+/* Em telas pequenas, permitimos quebra com espaçamento agradável */
+@media (max-width: 640px) {
+  .table td.actions {
+    white-space: normal;
+  }
+  .table td.actions .btn,
+  .table td.actions a {
+    margin: 4px 6px 0 0;
+  }
+}
+
 /* ---------- FORMULÁRIOS ----------- */
 .form-entity {
   background: #fff;

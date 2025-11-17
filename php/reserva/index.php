@@ -19,7 +19,7 @@ if ($busca !== '') {
   $where[] = "(c.nome LIKE ? OR m.numero = ?)";
   $params[] = "%{$busca}%";
   $types   .= 'si';
-  
+
   $params[] = ctype_digit($busca) ? (int)$busca : 0;
 }
 
@@ -47,12 +47,14 @@ $statuses = ['pendente','confirmada','cancelada'];
   <form method="get" style="margin:12px 0; display:flex; gap:8px; align-items:center;">
     <input type="text" name="q" value="<?= htmlspecialchars($busca) ?>"
            placeholder="Cliente ou nº da mesa" />
+    
     <select name="status">
       <option value="">— Status —</option>
       <?php foreach ($statuses as $st): ?>
         <option value="<?= $st ?>" <?= $status===$st?'selected':'' ?>><?= $st ?></option>
       <?php endforeach; ?>
     </select>
+
     <button class="btn">Filtrar</button>
     <a class="btn" href="/Projetos/projeto-caf-moderno/php/reserva/create.php">+ Nova Reserva</a>
   </form>
@@ -79,7 +81,17 @@ $statuses = ['pendente','confirmada','cancelada'];
         <td><?= fmtdt($r['inicio']) ?></td>
         <td><?= fmtdt($r['fim']) ?></td>
         <td><?= (int)$r['qtd_pessoas'] ?></td>
-        <td><span class="badge"><?= $r['status'] ?></span></td>
+
+        <?php
+          $clsStatus = 'badge';
+          if ($r['status'] === 'confirmada') {
+            $clsStatus .= ' success';
+          } elseif ($r['status'] === 'cancelada') {
+            $clsStatus .= ' badge-cancelada';
+          }
+        ?>
+        <td><span class="<?= $clsStatus ?>"><?= htmlspecialchars($r['status']) ?></span></td>
+
         <td class="actions">
           <a href="/Projetos/projeto-caf-moderno/php/reserva/read.php?id=<?= $r['id_reserva'] ?>">Ver</a>
           <a href="/Projetos/projeto-caf-moderno/php/reserva/update.php?id=<?= $r['id_reserva'] ?>">Editar</a>

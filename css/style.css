@@ -187,6 +187,11 @@ h1 {
   color: #fff;
 }
 
+.badge-cancelada {
+  background: #b41323;
+  color: #fff;
+}
+
 
 @media (max-width: 900px) {
   .form-entity {

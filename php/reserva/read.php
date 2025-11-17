@@ -30,7 +30,7 @@ function fmtdt($ts){
   <?php else: ?>
 
     <?php
-      // === Estilos de status (mesmo padrão do index) ===
+      
       $clsStatus = 'badge';
       if ($res['status'] === 'confirmada') {
         $clsStatus .= ' success';

@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (strtotime($fim) <= strtotime($inicio)) {
       $erro = "O fim deve ser depois do início.";
     } else {
-      // verifica capacidade da mesa
+      
       $cap = 0;
       $stmtCap = $conn->prepare("SELECT capacidade FROM mesa WHERE id_mesa=?");
       $stmtCap->bind_param("i", $id_mesa);
@@ -43,8 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $erro = "Quantidade excede a capacidade da mesa (cap. {$cap}).";
       } else {
 
-        // ===== VERIFICAÇÃO DE CONFLITO DE HORÁRIO NA MESMA MESA (EDITAR) =====
-        // Ignora a própria reserva (id_reserva <> ?)
+        
         $sqlConf = "
           SELECT COUNT(*)
           FROM reserva
@@ -64,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($qtdeConflitos > 0) {
           $erro = "Já existe uma reserva ativa para essa mesa nesse horário.";
         } else {
-          // ===== ATUALIZAÇÃO DA RESERVA =====
+          
           $stmtU = $conn->prepare("UPDATE reserva
                                    SET inicio=?, fim=?, qtd_pessoas=?, status=?, id_cliente=?, id_mesa=?
                                    WHERE id_reserva=?");
@@ -80,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
   }
 
-  // se deu erro, mantém o que o usuário digitou
+
   $atual = [
     'id_cliente'  => $id_cliente,
     'id_mesa'     => $id_mesa,

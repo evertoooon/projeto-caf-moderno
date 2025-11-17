@@ -11,19 +11,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $qtd         = (int)($_POST['qtd_pessoas'] ?? 0);
   $status      = $_POST['status'] ?? 'pendente';
 
-  // validação básica dos campos
+ 
   if (!$id_cliente || !$id_mesa || !$inicio_in || !$fim_in || $qtd <= 0) {
     $erro = "Preencha todos os campos obrigatórios.";
   } else {
 
-    // converte datas para formato datetime do banco
+   
     $inicio = date('Y-m-d H:i:s', strtotime($inicio_in));
     $fim    = date('Y-m-d H:i:s', strtotime($fim_in));
 
     if (strtotime($fim) <= strtotime($inicio)) {
       $erro = "O fim deve ser depois do início.";
     } else {
-      // verifica capacidade da mesa
+     
       $cap = 0;
       $stmtCap = $conn->prepare("SELECT capacidade FROM mesa WHERE id_mesa = ?");
       $stmtCap->bind_param("i", $id_mesa);
@@ -38,14 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $erro = "Quantidade excede a capacidade da mesa (cap. {$cap}).";
       } else {
 
-        // ===== VERIFICAÇÃO DE CONFLITO DE HORÁRIO NA MESMA MESA =====
-        // Regra: existe conflito se houver alguma reserva da mesma mesa,
-        // com status diferente de 'cancelada',
-        // cujo intervalo [inicio_existente, fim_existente]
-        // se sobrepõe ao novo intervalo [inicio, fim].
-        //
-        // Condição de sobreposição:
-        // inicio_existente < novo_fim  AND  fim_existente > novo_inicio
+       
         $sqlConf = "
           SELECT COUNT(*) 
           FROM reserva
@@ -62,10 +55,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmtConf->close();
 
         if ($qtdeConflitos > 0) {
-          // se já existe reserva ativa na mesma faixa de horário
+       
           $erro = "Já existe uma reserva ativa para essa mesa nesse horário.";
         } else {
-          // ===== INSERÇÃO DA RESERVA =====
+          
           $stmt = $conn->prepare("
             INSERT INTO reserva (inicio, fim, qtd_pessoas, status, id_cliente, id_mesa)
             VALUES (?, ?, ?, ?, ?, ?)

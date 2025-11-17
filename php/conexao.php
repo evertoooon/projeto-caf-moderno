@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost';
-$user = 'root';        // ou o usuário que você criou
-$pass = '';            // senha do MySQL (se houver)
+$user = 'root';        
+$pass = '';            
 $db   = 'cafemoderno';
 
 $conn = new mysqli($host, $user, $pass, $db);

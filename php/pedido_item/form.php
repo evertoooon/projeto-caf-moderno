@@ -1,5 +1,5 @@
 <?php
-// Espera: $action, $method, $data, $lockItem (bool)
+
 $method = $method ?? 'POST';
 $data = $data ?? ['id_item'=>'','quantidade'=>1];
 $lockItem = $lockItem ?? false;

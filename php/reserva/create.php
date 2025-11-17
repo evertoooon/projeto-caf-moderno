@@ -11,18 +11,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $qtd         = (int)($_POST['qtd_pessoas'] ?? 0);
   $status      = $_POST['status'] ?? 'pendente';
 
-  // validações básicas
+  
   if (!$id_cliente || !$id_mesa || !$inicio_in || !$fim_in || $qtd <= 0) {
     $erro = "Preencha todos os campos obrigatórios.";
   } else {
-    // to SQL TIMESTAMP
+    
     $inicio = date('Y-m-d H:i:s', strtotime($inicio_in));
     $fim    = date('Y-m-d H:i:s', strtotime($fim_in));
 
     if (strtotime($fim) <= strtotime($inicio)) {
       $erro = "O fim deve ser depois do início.";
     } else {
-      // capacidade da mesa
+      
       $cap = 0;
       $stmtCap = $conn->prepare("SELECT capacidade FROM mesa WHERE id_mesa=?");
       $stmtCap->bind_param("i", $id_mesa);

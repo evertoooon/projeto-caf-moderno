@@ -19,7 +19,7 @@ if ($busca !== '') {
   $where[] = "(c.nome LIKE ? OR m.numero = ?)";
   $params[] = "%{$busca}%";
   $types   .= 'si';
-  // para numero da mesa tentamos converter
+  
   $params[] = ctype_digit($busca) ? (int)$busca : 0;
 }
 

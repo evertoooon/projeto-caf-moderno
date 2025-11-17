@@ -1,5 +1,5 @@
 <?php
-// Espera variáveis: $action (URL), $data (array com campos) e $method (POST)
+
 $method = $method ?? 'POST';
 $data = $data ?? ['nome'=>'','email'=>'','telefone'=>''];
 ?>

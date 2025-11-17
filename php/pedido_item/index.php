@@ -9,7 +9,7 @@ if ($id_pedido <= 0) {
 }
 
 
-// pedido + cliente (para header)
+
 $h = $conn->prepare("SELECT p.id_pedido, p.status, c.nome AS cliente
                      FROM pedido p JOIN cliente c ON c.id_cliente=p.id_cliente
                      WHERE p.id_pedido=?");
@@ -17,7 +17,7 @@ $h->bind_param("i",$id_pedido);
 $h->execute();
 $pedido = $h->get_result()->fetch_assoc();
 
-// itens
+
 $stmt = $conn->prepare("SELECT pi.id_item, pi.quantidade,
                                ci.nome, ci.preco, (pi.quantidade*ci.preco) AS total_item
                         FROM pedido_item pi

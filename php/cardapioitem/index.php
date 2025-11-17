@@ -11,7 +11,7 @@ $conds  = [];
 $params = [];
 $types  = "";
 
-// filtro por texto (nome/categoria)
+
 if ($busca !== '') {
   $conds[]  = "(nome LIKE ? OR categoria LIKE ?)";
   $like     = "%{$busca}%";
@@ -19,19 +19,19 @@ if ($busca !== '') {
   $types   .= "ss";
 }
 
-// filtro por categoria exata
+
 if ($categoria !== '') {
   $conds[]  = "categoria = ?";
   $params[] = $categoria;
   $types   .= "s";
 }
 
-// aplica WHERE apenas se tiver condição
+
 if ($conds) {
   $sql .= " WHERE " . implode(" AND ", $conds);
 }
 
-// ordenação
+
 if ($ord === 'categoria') {
   $sql .= " ORDER BY categoria ASC, nome ASC";
 } else {

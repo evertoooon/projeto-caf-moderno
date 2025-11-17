@@ -1,5 +1,5 @@
 <?php
-// Espera: $action, $method ('POST'), $data (array)
+
 $method = $method ?? 'POST';
 $data = $data ?? [
   'id_cliente' => '',
@@ -10,7 +10,7 @@ $data = $data ?? [
   'status'     => 'pendente',
 ];
 
-// Helper para datetime-local
+
 function toInputDT($ts) {
   if (!$ts) return '';
   $t = strtotime($ts);
@@ -19,7 +19,7 @@ function toInputDT($ts) {
 }
 $statuses = ['pendente','confirmada','cancelada'];
 
-// Carrega listas
+
 require_once __DIR__ . '/../conexao.php';
 $cli = $conn->query("SELECT id_cliente, nome FROM cliente ORDER BY nome");
 $mes = $conn->query("SELECT id_mesa, numero, capacidade FROM mesa ORDER BY numero");

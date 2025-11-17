@@ -1,5 +1,5 @@
 <?php
-// Espera: $action, $method, $data
+
 $method = $method ?? 'POST';
 $data = $data ?? [
   'id_cliente' => '',

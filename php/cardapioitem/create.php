@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if ($nome === '' || !is_numeric($preco) || $preco < 0 || !in_array($cat, $categorias, true)) {
     $erro = 'Preencha os campos corretamente.';
   } else {
-    // se imagem informada, checa existência na pasta
+    
     if ($img !== '' && !in_array($img, $imagens, true)) {
       $erro = 'Arquivo de imagem não encontrado em /img_cardapio.';
     } else {

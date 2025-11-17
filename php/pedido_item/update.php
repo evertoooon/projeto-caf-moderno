@@ -40,7 +40,7 @@ $data = ['id_item'=>$id_item,'quantidade'=>$atual['quantidade']??1,'nome_item'=>
     <?php
       $action = "/Projetos/projeto-caf-moderno/php/pedido_item/update.php?id_pedido={$id_pedido}&id_item={$id_item}";
       $method = "POST";
-      $lockItem = true; // não permite trocar o item; apenas a quantidade
+      $lockItem = true; 
       include __DIR__ . "/form.php";
     ?>
   <?php endif; ?>
